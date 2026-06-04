@@ -5,13 +5,13 @@
 class Tmpo < Formula
   desc "Minimal CLI time tracker for developers"
   homepage "https://github.com/DylanDevelops/tmpo"
-  version "0.8.3"
+  version "0.8.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/DylanDevelops/tmpo/releases/download/v0.8.3/tmpo_0.8.3_Darwin_x86_64.tar.gz"
-      sha256 "1b478257dffe83245d5549bc3ead79a483afd1fe4c6d7b2fa81f005f2257a7c4"
+      url "https://github.com/DylanDevelops/tmpo/releases/download/v0.8.4/tmpo_0.8.4_Darwin_x86_64.tar.gz"
+      sha256 "c27dfc1a913109ec80a35ad5c8d8929e64e22473a10792872c49dca6c17ffaee"
 
       define_method(:install) do
         bin.install "tmpo"
@@ -19,8 +19,8 @@ class Tmpo < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/DylanDevelops/tmpo/releases/download/v0.8.3/tmpo_0.8.3_Darwin_arm64.tar.gz"
-      sha256 "4b1593de59c08c0521a385b941934fc09186cdf32fe97de97f35e9250aeed429"
+      url "https://github.com/DylanDevelops/tmpo/releases/download/v0.8.4/tmpo_0.8.4_Darwin_arm64.tar.gz"
+      sha256 "869c5b5eb7041227a092e08bb5ca90f4f619039c064678b108043bf4266b8469"
 
       define_method(:install) do
         bin.install "tmpo"
@@ -31,16 +31,16 @@ class Tmpo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/DylanDevelops/tmpo/releases/download/v0.8.3/tmpo_0.8.3_Linux_x86_64.tar.gz"
-      sha256 "e489afdbf47558c76bbb6e532d14646b4931e7f34900dd7bf70ab5e2d124ae01"
+      url "https://github.com/DylanDevelops/tmpo/releases/download/v0.8.4/tmpo_0.8.4_Linux_x86_64.tar.gz"
+      sha256 "1e6b86c9146f0fb51cb6591ab0520a620bd91f996c66ec06e17fd6b5011f8999"
       define_method(:install) do
         bin.install "tmpo"
         generate_completions_from_executable(bin/"tmpo", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/DylanDevelops/tmpo/releases/download/v0.8.3/tmpo_0.8.3_Linux_arm64.tar.gz"
-      sha256 "d1aafee3b878a045bf565268ca5b18bb2d0467e2dae0afaebafd2bdbe115b189"
+      url "https://github.com/DylanDevelops/tmpo/releases/download/v0.8.4/tmpo_0.8.4_Linux_arm64.tar.gz"
+      sha256 "41919df92373544af8b3e0a17f70101aadb57b14ca7db16ebdc789a762944ae0"
       define_method(:install) do
         bin.install "tmpo"
         generate_completions_from_executable(bin/"tmpo", "completion")
